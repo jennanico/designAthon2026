@@ -118,21 +118,29 @@ def main():
 
 
 
-    # Print results
+   # Print results & write to file
 
     total_impact = 0
     total_people_served = 0
 
+    file = open("brute_force_output.txt", "w")
+
     for i in range(len(applications)):
         if best_combination[i] == 1:
             print(applications[i].name, "|", applications[i].requested_money, "|", applications[i].impact, "|", applications[i].people_served)
+            file.write(f"{applications[i].name} | {applications[i].requested_money} | {applications[i].impact} | {applications[i].people_served}\n")
+            
             total_impact += applications[i].impact
             total_people_served += applications[i].people_served
 
     print()
     print("Total impact: ", total_impact)
+    file.write(f"\nTotal impact: {total_impact}\n")
     print("Total cost: ", best_cost)
+    file.write(f"Total cost: {best_cost}\n")
     print("Total people served: ", total_people_served)
+    file.write(f"Total people served: {total_people_served}\n")
+    file.close()
 
 
 if __name__ == "__main__":
