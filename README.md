@@ -8,4 +8,4 @@ Run the Python algorithms by providing 3 arguments:
 Example:
 `python3 grant_greedy_knapsack.py dataset.csv 50000 impact_to_score_ratio`
 
-Results will be printed to terminal.
+Results will be printed to terminal and written to the respective files (either greedy_output.txt or brute_force_output.txt).
