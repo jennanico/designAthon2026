@@ -1,0 +1,12 @@
+Mobile Food Pantry | 7200 | 8 | 200
+Youth Mentorship Program | 5000 | 7 | 60
+Mental Health Outreach | 9500 | 9 | 75
+Community Garden Project | 3100 | 5 | 40
+Senior Transportation Service | 6400 | 6 | 55
+After-School Tutoring | 4300 | 6 | 90
+Infant Nutrition Program | 5600 | 9 | 110
+Digital Literacy Classes | 2900 | 5 | 45
+
+Total impact: 55
+Total cost: 44000
+Total people served: 675
