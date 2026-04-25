@@ -57,23 +57,29 @@ def main():
 
 
 
-    # Print selected applications
+    # Print selected applications & write to file
 
     total_impact = 0
     total_cost = 0
     total_people_served = 0
 
+    file = open("greedy_output.txt", "w")
+
     for application in selected_applications:
         print(application.name, "|", application.requested_money, "|", application.impact, "|", application.people_served)
+        file.write(f"{application.name} | {application.requested_money} | {application.impact} | {application.people_served}\n")
         total_impact += application.impact
         total_cost += application.requested_money
         total_people_served += application.people_served
     
     print()
     print("Total impact: ", total_impact)
+    file.write(f"\nTotal impact: {total_impact}\n")
     print("Total cost: ", total_cost)
+    file.write(f"Total cost: {total_cost}\n")
     print("Total people served: ", total_people_served)
-
+    file.write(f"Total people served: {total_people_served}\n")
+    file.close()
 
 
 if __name__ == "__main__":
