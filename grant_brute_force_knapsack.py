@@ -55,10 +55,21 @@ def calculate_total_cost(applications_list, binary_list) -> int:
 
 
 # Remove ineligible applications from consideration
+
+#### Madeleine made changes to this- list was being edited during
+#### iteration, causing an index out of bound error in test cases
+#### constaining programs which were ineligible - fixed by editing a
+#### copy of the applications list 
+
 def remove_ineligible(applications_list) -> list:
+    viable_list = applications_list.copy()
+    print(len(applications_list))
     for i in range(len(applications_list) - 1):
         if applications_list[i].eligible == "No":
-            applications_list.remove(applications_list[i])
+            viable_list.remove(applications_list[i])
+    applications_list = viable_list
+
+
 
 
 # Main algorithm: generate all combinations of selections, and store the best based on score and budget
